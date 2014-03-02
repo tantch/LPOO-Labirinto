@@ -74,7 +74,7 @@ public class MazeGenerator {
 		} while (!heroi
 				|| (Math.abs(ti - si) < gm.LENGHT / 2 && Math.abs(tj - sj) < gm.WIDTH / 2));
 
-		gm.MAZE[tj][ti] = 'H';
+		
 		gm.HR.x = ti;
 		gm.HR.y =  tj;
 
@@ -90,7 +90,7 @@ public class MazeGenerator {
 
 		} while (!dragao
 				|| (Math.abs(ti - gm.HR.x) < gm.LENGHT / 6 && Math.abs(tj - gm.HR.y) < gm.WIDTH / 6));
-		gm.MAZE[tj][ti] = 'D';
+		
 		gm.DR.x = ti;
 		gm.DR.y = tj;
 
@@ -104,7 +104,9 @@ public class MazeGenerator {
 
 		} while (!espada
 				|| (Math.abs(ti - gm.HR.x) < gm.LENGHT / 3 && Math.abs(tj - gm.HR.y) < gm.WIDTH / 3));
-		gm.MAZE[tj][ti] = 'E';
+		
+		gm.SW.x=ti;
+		gm.SW.y=tj;
 		return 0;
 
 	}
