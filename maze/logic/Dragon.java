@@ -2,13 +2,12 @@ package maze.logic;
 
 public class Dragon extends Entity {
 
-	boolean slayn, sleeping, moving, overSword;
+	public boolean slayn, sleeping, overSword;
 
 	public Dragon() {
 
 		slayn = false;
-		sleeping = true;
-		moving = true;
+		sleeping = false;	
 		overSword = false;
 	}
 

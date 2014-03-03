@@ -55,6 +55,7 @@ public class MazeGenerator {
 			if (camAberto(si, sj)) {
 				gm.MAZE[sj][si] = 'S';
 				saida = true;
+			
 			}
 
 		} while (!saida);
@@ -77,7 +78,7 @@ public class MazeGenerator {
 		
 		gm.HR.x = ti;
 		gm.HR.y =  tj;
-
+		for(int i=0;i < gm.DRnum;i++){
 		do {
 			ti = rd.nextInt(gm.LENGHT - 1) + 1;
 			tj = rd.nextInt(gm.WIDTH - 1) + 1;
@@ -91,8 +92,9 @@ public class MazeGenerator {
 		} while (!dragao
 				|| (Math.abs(ti - gm.HR.x) < gm.LENGHT / 6 && Math.abs(tj - gm.HR.y) < gm.WIDTH / 6));
 		
-		gm.DR.x = ti;
-		gm.DR.y = tj;
+		gm.dragons[i].x = ti;
+		gm.dragons[i].y = tj;
+		}
 
 		do {
 			ti = rd.nextInt(gm.LENGHT - 1) + 1;
