@@ -171,8 +171,7 @@ public class MazeGenerator {
 							moved = true;
 
 							if (cpLim(j - 1, i, '.')) {
-
-								gm.MAZE[j - 1][i] = ' ';
+								gm.MAZE[j - 1][i] = ' ';																																																																																																																																																																																																																																																																																																														
 								if (cpLim(j - 1, i + 2, ' '))
 									if (rd.nextInt(8) != 0)
 										gm.MAZE[j - 1][i + 1] = 'X';
@@ -181,7 +180,7 @@ public class MazeGenerator {
 										gm.MAZE[j - 1][i - 1] = 'X';
 
 								j = j - 1;
-								
+								caminho.pop();
 								caminho.push(new Par(i, j));
 
 							}
@@ -211,7 +210,7 @@ public class MazeGenerator {
 										gm.MAZE[j + 1][i - 1] = 'X';
 
 								j = j + 1;
-							
+								caminho.pop();
 								caminho.push(new Par(i, j));
 
 							}
@@ -242,6 +241,7 @@ public class MazeGenerator {
 
 								
 								i = i + 1;
+								caminho.pop();
 								caminho.push(new Par(i, j));
 
 							}
@@ -271,6 +271,7 @@ public class MazeGenerator {
 
 								
 								i = i - 1;
+								caminho.pop();
 								caminho.push(new Par(i, j));
 
 							}
@@ -319,7 +320,7 @@ public class MazeGenerator {
 			for (int a = 1; a < gm.WIDTH - 1; a++) {
 
 				if (gm.MAZE[1][a - 1] == ' ' && gm.MAZE[1][a + 1] == ' '
-						&& gm.MAZE[2][a] == ' ' && rd.nextInt(4) != 1) {
+						&& gm.MAZE[2][a] == ' ' && rd.nextInt(2) != 1) {
 					gm.MAZE[1][a] = ' ';
 					gm.MAZE[2][a] = 'X';
 
@@ -355,7 +356,7 @@ public class MazeGenerator {
 				if (gm.MAZE[gm.WIDTH - 2][a - 1] == ' '
 						&& gm.MAZE[gm.WIDTH - 2][a + 1] == ' '
 						&& gm.MAZE[gm.WIDTH - 3][a] == ' '
-						&& rd.nextInt(4) != 1) {
+						&& rd.nextInt(2) != 1) {
 					gm.MAZE[gm.WIDTH - 2][a] = ' ';
 					gm.MAZE[gm.WIDTH - 3][a] = 'X';
 
@@ -388,7 +389,7 @@ public class MazeGenerator {
 			for (int a = 1; a < gm.WIDTH - 1; a++) {
 
 				if (gm.MAZE[a - 1][1] == ' ' && gm.MAZE[a + 1][1] == ' '
-						&& gm.MAZE[a][2] == ' ' && rd.nextInt(4) != 1) {
+						&& gm.MAZE[a][2] == ' ' && rd.nextInt(2) != 1) {
 					gm.MAZE[a][1] = ' ';
 					gm.MAZE[a][2] = 'X';
 
@@ -423,7 +424,7 @@ public class MazeGenerator {
 				if (gm.MAZE[a - 1][gm.LENGHT - 2] == ' '
 						&& gm.MAZE[a + 1][gm.LENGHT - 2] == ' '
 						&& gm.MAZE[a][gm.LENGHT - 3] == ' '
-						&& rd.nextInt(4) != 1) {
+						&& rd.nextInt(2) != 1) {
 					gm.MAZE[a][gm.LENGHT - 2] = ' ';
 					gm.MAZE[a][gm.LENGHT - 3] = 'X';
 

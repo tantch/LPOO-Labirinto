@@ -7,7 +7,7 @@ public class Sword extends Entity {
 	void refresh() {
 
 		if (pickedUp)
-			token = 'e';
+			token = ' ';
 		else
 			token = 'E';
 

@@ -20,6 +20,9 @@ public class Main {
 		}
 
 		int a = sc.nextInt();
+		while (!sc.hasNextInt()) {
+			sc.next();
+		}	
 		int b = sc.nextInt();
 		mg = new MazeGenerator(a, b, 0);
 

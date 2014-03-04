@@ -15,7 +15,7 @@ public class Game {
 		LENGHT = l;
 
 		MAZE = new char[WIDTH][LENGHT];
-		DRnum = 5;
+		DRnum = 2;
 		dragons = new Dragon[DRnum];
 		for (int i = 0; i < DRnum; i++)
 			dragons[i] = new Dragon();
@@ -95,8 +95,11 @@ public class Game {
 		if (nearDragon(plrx, plry)) {
 			if (HR.armed)
 				killDragon(plrx, plry);
-			else if (killHero(plrx, plry))
+			else if (killHero(plrx, plry)){
+				HR.x = plrx;
+				HR.y = plry;
 				return 1;
+			}
 
 		}
 
@@ -145,6 +148,11 @@ public class Game {
 				HR.alive = false;
 				return true;
 			}
+			if (x == dragons[i].x && y == dragons[i].y
+					&& !dragons[i].sleeping) {
+				HR.alive = false;
+				return true;
+			}
 
 		}
 		return false;
@@ -170,15 +178,18 @@ public class Game {
 	public int moveDragons() {
 		Random rd = new Random();
 		int dx, dy;
+		int k;
+		boolean clear=true;
 		boolean moved = false;
 		for (int i = 0; i < DRnum; i++) {
 			moved = false;
-
+			k=0;
 			MAZE[dragons[i].y][dragons[i].x] = ' ';
 
 			if (!dragons[i].slayn && !dragons[i].sleeping) {
 
 				do {
+					clear=true;
 					dx = rd.nextInt(3) - 1;
 					dy = rd.nextInt(3) - 1;
 
@@ -188,23 +199,37 @@ public class Game {
 						else
 							dy = 0;
 					}
-
+					for(int j=0;j<DRnum;j++){
+						
+						if(i != j && dragons[i].x
+							+ dx == dragons[j].x && dragons[i].y + dy == dragons[j].y)
+							clear=false;
+						
+						
+						
+					}
+					
 					if (!(MAZE[dragons[i].y + dy][dragons[i].x + dx] == 'X'
-							|| MAZE[dragons[i].y + dy][dragons[i].x + dx] == 'S' || (dragons[i].x
-							+ dx == dragons[i].x && dragons[i].y + dy == dragons[i].y)))
+							|| MAZE[dragons[i].y + dy][dragons[i].x + dx] == 'S') && clear)
 						moved = true;
 
 					if (dx == 0 && dy == 0)
 						moved = false;
+					k++;
+				} while (!moved && k<20);
 
-				} while (!moved);
-
+				if(moved){
 				dragons[i].x = dragons[i].x + dx;
 				dragons[i].y = dragons[i].y + dy;
+				if(dragons[i].x == SW.x && dragons[i].y ==SW.y && !SW.pickedUp)
+					dragons[i].overSword=true;
+				else
+					dragons[i].overSword=false;
+				
+				}
 			}
 		}
 		return 0;
 
 	}
-
 }
