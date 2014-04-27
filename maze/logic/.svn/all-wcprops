@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/LPOO2MIEIC06-02/!svn/ver/34/maze/logic
+END
+Exit.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LPOO2MIEIC06-02/!svn/ver/34/maze/logic/Exit.java
+END
+Empty.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/LPOO2MIEIC06-02/!svn/ver/29/maze/logic/Empty.java
+END
+Sword.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/LPOO2MIEIC06-02/!svn/ver/34/maze/logic/Sword.java
+END
+Wall.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LPOO2MIEIC06-02/!svn/ver/32/maze/logic/Wall.java
+END
+Hero.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LPOO2MIEIC06-02/!svn/ver/32/maze/logic/Hero.java
+END
+Unit.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LPOO2MIEIC06-02/!svn/ver/34/maze/logic/Unit.java
+END
+MazeGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/LPOO2MIEIC06-02/!svn/ver/33/maze/logic/MazeGenerator.java
+END
+Eagle.java
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/LPOO2MIEIC06-02/!svn/ver/30/maze/logic/Eagle.java
+END
+Dragon.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/LPOO2MIEIC06-02/!svn/ver/29/maze/logic/Dragon.java
+END
+Entity.java
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/LPOO2MIEIC06-02/!svn/ver/30/maze/logic/Entity.java
+END
+Game.java
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/LPOO2MIEIC06-02/!svn/ver/34/maze/logic/Game.java
+END
+Par.java
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/LPOO2MIEIC06-02/!svn/ver/32/maze/logic/Par.java
+END
+Unvisited.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/LPOO2MIEIC06-02/!svn/ver/32/maze/logic/Unvisited.java
+END
